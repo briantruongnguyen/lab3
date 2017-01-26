@@ -20,6 +20,7 @@ function initializePage() {
     // Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
     $("a.thumbnail").click(projectClick);
+    
 }
 
 function projectClick(e) {
@@ -35,6 +36,10 @@ function projectClick(e) {
        $(containingProject).append("<div class='project-description'><p>Description of the project.</p></div>");
     } else {
        $(containingProject).hide();
+       $(containingProject).fadeIn();
+       $("div.project-description").toggle();
+
+        
     }
 }
 
